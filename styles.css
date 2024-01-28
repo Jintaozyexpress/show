@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 20px;
     background: linear-gradient(to bottom, #faa
-    , #666); /* 修改这里的颜色值 */
+    , #333,#885,#124,#643,#975); /* 修改这里的颜色值 */
 }
 
 .flex-container {
@@ -14,7 +14,7 @@ body {
 }
 
 .resizable-image {
-    width: 180px;
+    width: 120px;
     height: auto;
     margin: 10px;
     border: 1px solid #000;
