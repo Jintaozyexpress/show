@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+    background: linear-gradient(to bottom, #faa
+    , #666); /* 修改这里的颜色值 */
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.resizable-image {
+    width: 180px;
+    height: auto;
+    margin: 10px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+    opacity: 0; /* 初始化时设置透明度为0 */
+}
+.resizable-image:hover {
+    transform: scale(1.1);
+}

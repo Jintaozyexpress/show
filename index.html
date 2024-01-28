@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>HK TRAVEL FOR JINTAO</title>
+</head>
+
+<body>
+    <div id="background-music">
+        <!-- 音频元素，设置autoplay属性使其自动播放 -->
+        <audio autoplay loop>
+            <!-- 音频文件的URL -->
+            <source src="https://pub-7ec9fa74a5924640a9ad167b05e79229.r2.dev/1536310318354.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+    <div id="image-container" class="flex-container"></div>
+    <script>
+        // 获取背景音乐的div
+        const backgroundMusicDiv = document.getElementById("background-music");
+
+        // 监听页面点击事件
+        document.addEventListener("click", function() {
+            // 显示背景音乐的div
+            backgroundMusicDiv.style.display = "block";
+
+            // 移除点击事件监听，确保音乐只播放一次
+            document.removeEventListener("click", arguments.callee);
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
