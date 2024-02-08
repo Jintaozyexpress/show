@@ -16,6 +16,8 @@ for (let i = 1; i <= lastImageIndex; i++) {
     imgElement.src = "placeholder.jpg"; // 占位图，可以替换为你的占位图地址
     imgElement.alt = "Resizable Image";
     imgElement.classList.add("resizable-image");
+    imgElement.setAttribute("width", "480px"); // 例如，设置明确的宽度值（根据你的设计需要调整）
+    imgElement.setAttribute("height", "480px");
     imageContainer.appendChild(imgElement);
 
     // 监听图片元素进入可见区域时加载真实图片
