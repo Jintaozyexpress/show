@@ -1,7 +1,9 @@
 // URL拼接的常量部分
 const baseUrl = "https://pub-7ec9fa74a5924640a9ad167b05e79229.r2.dev/";
-const extension = ".jpeg";
+const extension = ".webp";
 const lastImageIndex = 75;
+imgElement.style.width = "480px"; // 让宽度占满父容器
+imgElement.style.height = "auto"; // 高度自适应
 
 // 获取图片容器元素
 const imageContainer = document.getElementById("image-container");
