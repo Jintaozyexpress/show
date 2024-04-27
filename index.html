@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Gallery</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to left top, #faa, #fff); /* Start with white */
+  animation: gradientAnimation 10s 0.3s infinite alternate; 
+}
+
+.gallery {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.column {
+  flex: 0 0 calc(50% - 10px); /* 50% width for each column, minus margin */
+}
+
+.column img {
+  border-radius: 10px; 
+  display: block;
+  width: 100%;
+  margin-bottom: 10px; /* Optional: Adjust spacing between images */
+}
+</style>
+</head>
+<body>
+
+<div class="gallery">
+  <div class="column" id="left-column"></div>
+  <div class="column" id="right-column"></div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const baseUrl = "https://pub-7ec9fa74a5924640a9ad167b05e79229.r2.dev/"; // 修改为你的图片基础链接
+  const imageCount = 10; // 修改为你的图片数量
+
+  const leftColumn = document.getElementById('left-column');
+  const rightColumn = document.getElementById('right-column');
+
+  for (let i = 1; i <= imageCount; i++) {
+    const imageUrl = `${baseUrl}${i}.webp`; // 假设链接为 www.example.com/images/1.png, www.example.com/images/2.png, ...
+    const imgElement = document.createElement('img');
+    imgElement.src = imageUrl;
+
+    // 将图片交替添加到左右两列
+    if (i % 2 === 0) {
+      rightColumn.appendChild(imgElement);
+    } else {
+      leftColumn.appendChild(imgElement);
+    }
+  }
+});
+</script>
+
+</body>
+</html>
